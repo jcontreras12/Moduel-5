@@ -8,13 +8,16 @@ for x in range(100):
 
 # the second program will write a loop that prints each number in a new line
 # and a loop that prints each number and its square on a new line
-
+'''
+Problem says, print each number. Your list has string elements.
+Don't use a quotation mark for number element: [12, 10, 32, 3, 66, 17, 42, 99, 20]
+'''
 for number in ["12", "10", "32", "3", "66", "17", "42", "99", "20"]:
     for e in number:
         print(e)
     for e in number:
-        sqr = e * e
-        print("sqaure of", e, "is", sqr)
+        #sqr = e * e
+        print("sqaure of", e, "is", e**2) #optimize the code :two lines -> one line
 
 # the third program will ask the user for number of sides and length and color of a line to make a rectangle
 import turtle
@@ -29,13 +32,16 @@ Draw = turtle.Turtle()
 Draw.begin_fill
 for i in range(Sides):
     Draw.forward(long)
-    Draw.prncolor(color)
-    Draw.fillcolor(color_b)
+    Draw.prncolor(color)    #place this line before the loop starts.
+    Draw.fillcolor(color_b) #place this line before the loop starts.
     Draw.left(360 / Sides)
 Draw.end_fill()
 wn.exitonclick()
 
 # Fourth problem, A program that iterates the integers from 1-50. For multiples of three and five, and both
+'''
+Change the order of checking the conditions.
+'''
 for i in range(0, 51):
     if i % 3 == 0:
         print(i, "divisible by 3")
